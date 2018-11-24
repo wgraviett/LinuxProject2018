@@ -16,7 +16,7 @@ do
 	then
 		echo " Found: $CurrentIP.$i"
 		echo " Connecting over ssh"
-		ssh -t root@$CurrentIP.$i " $(< projectContents.sh)" >> p.txt
+		ssh -t root@$CurrentIP.$i " $(< projectContents.sh)" >> data.txt
 		let "IPPingLocatorLimit++" #used to count active nodes
 		if [ $IPPingLocatorLimit -ne 2 ] #if 2 nodes have not been found yet, continue
 		then
@@ -27,4 +27,10 @@ fi
 fi
 done
 
-echo " Information collected and saved to p.txt"
+echo " Information collected and saved to data.txt"
+echo " SSH to Amazon Instance"
+ssh -t -i "/home/user1/projectkey.pem" ec2-user@ec2-18-212-123-108.compute-1.amazonaws.com " $(< CheckDockerInstalled.sh)" #Checks for docker installed, if not then it installs.
+$(scp -i "/home/user1/projectkey.pem" /home/user1/LinuxProject2018/data.txt ec2-user@ec2-18-212-123-108.compute-1.amazonaws.com:/var/website) #Transfer latest node information to remote web server on AWS instance. 
+echo "Docker Install verified and latest node information updated to 18.212.123.108:8080/data.txt"
+
+
