@@ -16,7 +16,7 @@ do
 	then
 		echo " Found: $CurrentIP.$i"
 		echo " Connecting over ssh"
-		ssh -t root@$CurrentIP.$i " $(< projectContents.sh)" >> data.txt#Runs projectcontents script from local device on the remote device
+		ssh -t root@$CurrentIP.$i " $(< projectContents.sh)" >> data.txt #Runs projectcontents script from local device on the remote device
 		let "IPPingLocatorLimit++" #used to count active nodes
 		if [ $IPPingLocatorLimit -ne 2 ] #if 2 nodes have not been found yet, continue
 		then
