@@ -1,0 +1,32 @@
+1:Node name: node1
+2:Distribution: DISTRIB_RELEASE=16.04
+3: Architecture: x86_64
+4: Interface Devices: enp0s3,
+5: IP Address: 192.168.1.20,
+6: Users Logged into the System: user2,root,
+7:HDD Total Space:  10 GiB
+8: HDD Used Space:3.9G
+9:Total Memory: 990M
+10: Free Memory: 93M
+11:Number of user accounts created after installation:1
+12: Number of users that were able to logg into the system from installation time:2
+13: Total number of user groups: 68
+14: System Uptime: 17:20:16
+15:Processor: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+
+1:Node name: Node2_CentOS
+2:Distribution: NAME="CentOS Linux"
+3: Architecture: x86_64
+4: Interface Devices: enp0s3,
+5: IP Address: 192.168.1.30,
+6: Users Logged into the System: root,root,
+7:HDD Total Space:  8589 MB
+8: HDD Used Space:159M
+9:Total Memory: 991M
+10: Free Memory: 759M
+11:Number of user accounts created after installation:1
+12: Number of users that were able to logg into the system from installation time:2
+13: Total number of user groups: 37
+14: System Uptime: 18:20:48
+15:Processor: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+
